@@ -1,0 +1,43 @@
+/* h1{
+    color: red;
+} */
+:root {
+  --color-lightred: rgb(199, 50, 50); 
+  font-size: 20px;
+}
+
+*{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Splash', cursive;
+    margin: 0;
+}
+
+
+/* p {
+   background-color: lightblue; 
+}
+
+#myp {
+    color: brown;
+
+} */
+
+#mydiv1{
+    /* color: var(--color-lightred); */
+    font-size: 50px;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    
+}
+
+#mydiv2{
+    /* color: var(--color-lightred); */
+    font-size: 1rem;
+    height: 50vh;
+    width: 50vw;
+    background-color: lightblue;
+   
+}
+
+

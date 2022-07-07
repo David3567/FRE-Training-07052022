@@ -1,0 +1,17 @@
+.item {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: bisque;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column-reverse; 
+
+    /* justify-content: ; */
+
+
+}
+
+

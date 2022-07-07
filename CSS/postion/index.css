@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+
+}
+.container1 {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, 50%);
+}
+
+/* .container2 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    right: 20px;
+} */
+/* .container3 {
+    position: relative;
+    top: 30px;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+.container4 {
+    position: absolute;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+} */
