@@ -72,29 +72,29 @@
 // 	}
 // 	return arr;
 // };
-// Array.prototype.myFilter = function (callback) {
-// 	const arr = [];
-// 	for (let i = 0; i < this.length; i++) {
-// 		if (callback(this[i], i, this)) {
-// 			arr.push(this[i]);
-// 		}
-// 	}
-// 	return arr;
-// };
+Array.prototype.myFilter = function (cbfn) {
+	const arr = [];
+	for (let i = 0; i < this.length; i++) {
+		if (cbfn(this[i], i, this)) {
+			arr.push(this[i]);
+		}
+	}
+	return arr;
+};
 
-// const fromFilter = arr.myFilter(function (cur, i, self) {
-//   return cur % 2 !== 0;
-// });
+const fromFilter = arr.myFilter(function (cur, i, self) {
+  return cur % 2 !== 0;
+});
 // console.log(fromFilter);
 
-// Array.prototype.myReduce = function (...args) {
-// 	let [acc, index] = args.length < 2 ? [this[0], 1] : [args[1], 0];
+Array.prototype.myReduce = function (...args) {
+	let [acc, index] = args.length < 2 ? [this[0], 1] : [args[1], 0];
 
-// 	for (let i = index; i < this.length; i++) {
-// 		acc = args[0](acc, this[i], i, this);
-// 	}
-// 	return acc;
-// };
+	for (let i = index; i < this.length; i++) {
+		acc = args[0](acc, this[i], i, this);
+	}
+	return acc;
+};
 
 // const str = 'abc';
 //  // ['a', 'b', 'c']
