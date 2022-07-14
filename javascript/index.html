@@ -5,7 +5,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<script async src="index.js"></script>
+		<!-- <script async src="index.js"></script> -->
 	</head>
-	<body></body>
+	<body>
+		<!-- <button onclick="addli()">add li</button>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul> -->
+
+		<div class="cccc" onclick="handleClick()">
+			<div class="bbbb">
+				<div
+					id="aaaa"
+					style="height: 200px; width: 200px; background-color: red"
+				></div>
+			</div>
+		</div>
+
+		<script>
+			const handleClick = () => {
+				console.log(event.target.id);
+			};
+		</script>
+	</body>
 </html>

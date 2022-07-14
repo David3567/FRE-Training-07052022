@@ -722,3 +722,17 @@ myFetch(baseUrl, {
 //* ~~~~~~~~~~~~~~ Day5 TodoList ~~~~~~~~~~~~~~
 
 //* ~~~~~~~~~~~~~~ Evaluation ~~~~~~~~~~~~~~
+
+
+const liHtmlCollection = document.getElementsByTagName("li");
+const liNodeList = document.querySelectorAll("li");
+
+const ulHtmlCollection = document.getElementsByTagName("ul")[0];
+
+function addli() {
+  const newli = document.createElement("li");
+  ulHtmlCollection.appendChild(newli);
+
+  console.log("htmlcollection: ", liHtmlCollection.length);
+  console.log("linodelist: ", liNodeList.length);
+}
