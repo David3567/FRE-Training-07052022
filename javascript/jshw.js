@@ -342,6 +342,7 @@ const subset = (arr, len) => {
     const res = [];
     const subArr = [];
     if (!arr.length || len < 1) return null;
+    
     arr.sort((a, b) => a - b);
     helper(subArr, 0, res);
     function helper(subArr, start, res) {

@@ -1,4 +1,4 @@
-import { Api } from './api/api.js';
+import { Api } from "./api/api.js";
 
 //* ~~~~~~~~~~~~~~~~~~~~~ View ~~~~~~~~~~~~~~~~~~~~~
 const View = (() => {
@@ -42,6 +42,7 @@ const Model = ((api, view) => {
 	}
 	class State {
 		#todos = [];
+		todosContainer = document.querySelector(view.domstr.todosContainer);
 
 		get todolist() {
 			return this.#todos;
@@ -49,9 +50,8 @@ const Model = ((api, view) => {
 		set todolist(todos) {
 			this.#todos = [...todos];
 
-			const todosContainer = document.querySelector(view.domstr.todosContainer);
 			const tmp = view.createTmp(this.#todos);
-			view.render(todosContainer, tmp);
+			view.render(this.todosContainer, tmp);
 		}
 	}
 
@@ -88,10 +88,10 @@ const Controller = ((model, view) => {
 			if (event.code === "Enter" && event.target.value.trim() !== "") {
 				const newTodo = new model.Todo(event.target.value);
 
-        model.addTodo(newTodo).then(todo => {
-          state.todolist = [todo, ...state.todolist];
-        });
-        event.target.value = '';
+				model.addTodo(newTodo).then((todo) => {
+					state.todolist = [todo, ...state.todolist];
+				});
+				event.target.value = "";
 			}
 		});
 	};
